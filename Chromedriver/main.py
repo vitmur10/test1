@@ -84,7 +84,7 @@ try:
     month.send_keys(Keys.ENTER)
     month.send_keys(Keys.ENTER)
     time.sleep(15)
-    code = solver.get_result(71375768604)
+    code = solver.get_result(result)
 except Exception as ex:
     print(ex)
 
