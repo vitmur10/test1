@@ -23,6 +23,9 @@ date_of_birth = {'day': random.randrange(1, 28),
                  }
 nickname = input('Nickname:')
 email = str(input('Email:'))
+
+
+#Перевірка Емаіл
 if '@' not in email:
     print('The email must contain the @ symbol!!!')
     email = str(input('Email:'))
@@ -37,6 +40,7 @@ options.add_argument("user-agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0
 
 options.add_argument("--disable-blink-features=AutomationControlled")
 
+
 #options.headless = True
 driver = webdriver.Chrome(
     executable_path=r"C:\Users\vital\OneDrive\Робочий стіл\test1\Chromedriver\chromedriver.exe",
@@ -48,7 +52,7 @@ solver = TwoCaptcha(Token)
 config = {
             'server':           '2captcha.com',
             'apiKey':           '6d2047f498b2f9d6dd6d823a876411dd',
-            'softId':            123,
+            'softId':            71375879060,
             'callback':         'https://discord.com/register',
             'defaultTimeout':    5,
             'recaptchaTimeout':  5,
@@ -84,7 +88,6 @@ try:
     month.send_keys(Keys.ENTER)
     month.send_keys(Keys.ENTER)
     time.sleep(15)
-    code = solver.get_result(result)
 except Exception as ex:
     print(ex)
 
